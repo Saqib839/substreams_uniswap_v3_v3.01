@@ -1,0 +1,11 @@
+{
+    "image": "ghcr.io/devcontainers/templates/rust:2.1.0",
+    "customizations": {
+        "vscode": {
+            "extensions": ["1yib.rust-bundle", "rust-lang.rust-analyzer", "vadimcn.vscode-lldb"]
+        }
+    },
+    "features": {
+        "./substreams": {}
+    }
+}
