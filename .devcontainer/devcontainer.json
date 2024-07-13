@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/devcontainers/templates/rust:2.1.0",
+    "image": "mcr.microsoft.com/devcontainers/rust:1.0.14-bullseye",
     "customizations": {
         "vscode": {
             "extensions": ["1yib.rust-bundle", "rust-lang.rust-analyzer", "vadimcn.vscode-lldb"]
