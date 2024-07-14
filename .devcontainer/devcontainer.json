@@ -4,7 +4,15 @@
     },
     "customizations": {
         "vscode": {
-            "extensions": ["1yib.rust-bundle", "rust-lang.rust-analyzer", "vadimcn.vscode-lldb"]
+            "extensions": ["1yib.rust-bundle", "rust-lang.rust-analyzer", "vadimcn.vscode-lldb"],
+            "tasks": [
+                {
+                    "label": "Substreams: build package",
+                    "type": "shell",
+                    "command": "substreams pack",
+                    "problemMatcher": []
+                }
+            ]
         }
     },
     "features": {
