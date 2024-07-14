@@ -1,10 +1,20 @@
-# substreams-uniswap-v3
+# Uniswap v3 Substreams package
+
+[![Substreams Package](https://img.shields.io/badge/streamingfast%2Funiswap-v3?logo=bitcoin&logoColor=orange&label=spkg.io&color=blue)](https://substreams.dev/streamingfast/uniswap-v3/latest)
 
 [Substreams](https://substreams.streamingfast.io)-based Uniswap-v3 Subgraph and Substreams. Still in beta.
 
-The Subgraph-style output hinges on the latest `graph-node` to implement `substreams` data sources.
+This module emits EntityChanges, and are written directly to `graph-node` without any AssemblyScript mappings therein.
 
-Substreams are consumable directly.
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/streamingfast/substreams-uniswap-v3)
+
+
+```bash
+make build
+substreams gui map_pools_created \
+  -e mainnet.eth.streamingfast.io:443 \
+  -t +150
+```
 
 ## Stream intermediate values and events
 
