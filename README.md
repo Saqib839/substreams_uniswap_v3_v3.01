@@ -1,66 +1,21 @@
 # Uniswap v3 Substreams package
 
 [![Substreams Package](https://img.shields.io/badge/streamingfast%2Funiswap-v3?logo=bitcoin&logoColor=orange&label=spkg.io&color=blue)](https://substreams.dev/streamingfast/uniswap-v3/latest)
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/streamingfast/substreams-uniswap-v3)
 
-[Substreams](https://substreams.streamingfast.io)-based Uniswap-v3 Subgraph and Substreams. Still in beta.
+[Substreams](https://substreams.streamingfast.io)-based Uniswap-v3 Substreams-powered-subgraph.
 
 This module emits EntityChanges, and are written directly to `graph-node` without any AssemblyScript mappings therein.
 
-[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/streamingfast/substreams-uniswap-v3)
+This module covers all of the entities of the original `v3-subgraph` by the Uniswap team. It syncs much faster.
 
+Launch the _devpod_ above and run:
 
 ```bash
 make build
 substreams gui map_pools_created \
   -e mainnet.eth.streamingfast.io:443 \
   -t +150
-```
-
-## Stream intermediate values and events
-
-- Replace the spkg with the version you would like to use, the current release can be found on [Github](https://github.com/streamingfast/substreams-uniswap-v3/releases).
-
-- Replace the StreamingFast api endpoint with the preferred network, a list of chains and endpoints can be found [here](https://substreams.streamingfast.io/reference-and-specs/chains-and-endpoints).
-
-```bash
-substreams run https://github.com/streamingfast/substreams-uniswap-v3/releases/download/v0.2.8/substreams.spkg \
-  map_pools_created \
-  -e mainnet.eth.streamingfast.io:443 \
-  -t +150
-[...]
-{
-  "@module": "map_pools_created",
-  "@block": 12369739,
-  "@type": "uniswap.types.v1.Pools",
-  "@data": {
-    "pools": [
-      {
-        "address": "1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801",
-        "createdAtTimestamp": "1620157956",
-        "createdAtBlockNumber": "12369739",
-        "token0": {
-          "address": "1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-          "name": "Uniswap",
-          "symbol": "UNI",
-          "decimals": "18",
-          "totalSupply": "1000000000000000000000000000"
-        },
-        "token1": {
-          "address": "c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-          "name": "Wrapped Ether",
-          "symbol": "WETH",
-          "decimals": "18",
-          "totalSupply": "6776710776126719425230827"
-        },
-        "feeTier": 3000,
-        "tickSpacing": 60,
-        "logOrdinal": "835",
-        "transactionId": "37d8f4b1b371fde9e4b1942588d16a1cbf424b7c66e731ec915aca785ca2efcf"
-      }
-    ]
-  }
-}
-[...]
 ```
 
 ## Stream Entity changes
