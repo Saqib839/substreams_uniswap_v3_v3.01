@@ -2,6 +2,7 @@
 
 [![Substreams Package](https://img.shields.io/badge/streamingfast%2Funiswap-v3?logo=bitcoin&logoColor=orange&label=spkg.io&color=blue)](https://substreams.dev/streamingfast/uniswap-v3/latest)
 [![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/streamingfast/substreams-uniswap-v3)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/streamingfast/substreams-uniswap-v3)
 
 [Substreams](https://substreams.streamingfast.io)-based Uniswap-v3 Substreams-powered-subgraph.
 
