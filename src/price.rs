@@ -130,7 +130,7 @@ pub fn find_eth_per_token(
 
             let liquidity: BigInt = match pool_liquidities_store.get_at(ord, format!("pool:{pool_address}")) {
                 None => {
-                    log::debug!("No liquidity for pool {pool_address}");
+                    log::debug!("No liquidity for pool {pool_address}",);
                     BigInt::zero()
                 }
                 Some(l) => l,
