@@ -1,17 +1,17 @@
 extern crate core;
 
 pub mod abi;
+pub mod pb;
+pub mod price;
+pub mod utils;
 mod ast;
 mod db;
 mod eth;
 mod filtering;
 mod math;
-mod pb;
-mod price;
 mod rpc;
 mod storage;
 mod ticks_idx;
-mod utils;
 
 use crate::ethpb::v2::{Block, StorageChange};
 use crate::pb::uniswap;

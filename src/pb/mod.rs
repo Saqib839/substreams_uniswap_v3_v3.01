@@ -31,9 +31,9 @@ impl Erc20Token {
         log::info!(
             "token addr: {}, name: {}, symbol: {}, decimals: {}",
             self.address,
-            self.decimals,
+            self.name,
             self.symbol,
-            self.name
+            self.decimals
         );
     }
 }
