@@ -11,7 +11,8 @@ package:
     Stores are used as temporary storage to hold/pass down key data to mappers, such as ETH price
     in USD. These substreams modules compose all the things to build up the Uniswap v3 Substreams.
     See individual modules docs for more information.
-
+ 
+ 
 imports:
   entity: https://github.com/streamingfast/substreams-entity-change/releases/download/v1.1.0/substreams-entity-change-v1.1.0.spkg
 
