@@ -347,3 +347,64 @@ modules:
       type: proto:sf.substreams.entity.v1.EntityChanges
     doc: |
       `EntityChanges` emitted out for all the entities defined in the `schema.graphql` for the Uniswap v3 Subgraph.
+
+  # - name: custom_m1
+  #   kind: map
+  #   initialBlock: 12369621
+  #   inputs:
+  #     # - source: sf.substreams.v1.Clock
+  #     - store: store_pool_count
+  #       mode: deltas
+  #     - store: store_total_tx_counts
+  #       mode: deltas
+  #     - store: store_total_tx_counts
+  #     - store: store_swaps_volume
+  #       mode: deltas
+  #     - store: store_eth_prices
+  #     - store: store_eth_prices
+  #       mode: deltas
+  #     - map: map_extract_data_types
+  #     - map: map_pools_created
+  #     - store: store_pool_sqrt_price
+  #       mode: deltas
+  #     - store: store_prices
+  #       mode: deltas
+  #     - store: store_token_tvl
+  #       mode: deltas
+  #     - store: store_derived_tvl
+  #       mode: deltas
+  #     - store: store_tokens
+  #   output:
+  #     type: proto:sf.substreams.entity.v1.EntityChanges
+  #   doc: |
+  #     Outputs `EntityChanges` for selected entities in the `schema.graphql` tailored for the Uniswap V3 data needed.
+
+  - name: custom_m1
+    kind: map
+    initialBlock: 12369621
+    inputs:
+      - source: sf.substreams.v1.Clock
+      - store: store_pool_count
+        mode: deltas
+      - store: store_total_tx_counts
+        mode: deltas
+      - store: store_swaps_volume
+        mode: deltas
+      - store: store_eth_prices
+        mode: deltas
+      - map: map_extract_data_types
+      - map: map_pools_created
+      - store: store_pool_sqrt_price
+        mode: deltas
+      - store: store_pool_sqrt_price
+      - store: store_token_tvl
+        mode: deltas
+      - store: store_prices
+        mode: deltas
+      - store: store_tokens
+      - store: store_derived_tvl
+        mode: deltas
+      - store: store_total_tx_counts
+      - store: store_eth_prices
+    output:
+      type: proto:sf.substreams.entity.v1.EntityChanges

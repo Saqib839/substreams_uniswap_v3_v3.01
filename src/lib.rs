@@ -1392,3 +1392,53 @@ pub fn graph_out(
 
     Ok(tables.to_entity_changes())
 }
+
+#[substreams::handlers::map]
+pub fn custom_m1(
+    clock: Clock,
+    pool_count_deltas: Deltas<DeltaBigInt>,              /* store_pool_count */
+    tx_count_deltas: Deltas<DeltaBigInt>,                /* store_total_tx_counts deltas */
+    swaps_volume_deltas: Deltas<DeltaBigDecimal>,        /* store_swaps_volume */
+    derived_eth_prices_deltas: Deltas<DeltaBigDecimal>,  /* store_eth_prices */
+    events: Events,                                      /* map_extract_data_types */
+    pools_created: Pools,                                /* map_pools_created */
+    pool_sqrt_price_deltas: Deltas<DeltaProto<PoolSqrtPrice>>, /* store_pool_sqrt_price */
+    pool_sqrt_price_store: StoreGetProto<PoolSqrtPrice>, /* store_pool_sqrt_price */
+    token_tvl_deltas: Deltas<DeltaBigDecimal>,           /* store_token_tvl */   
+    // pool_liquidities_store_deltas: Deltas<DeltaBigInt>,  /* store_pool_liquidities */
+    price_deltas: Deltas<DeltaBigDecimal>,               /* store_prices */
+    // store_prices: StoreGetBigDecimal,                    /* store_prices */
+    tokens_store: StoreGetInt64,                         /* store_tokens */
+    // tokens_whitelist_pools_deltas: Deltas<DeltaArray<String>>, /* store_tokens_whitelist_pools */
+    derived_tvl_deltas: Deltas<DeltaBigDecimal>,         /* store_derived_tvl */
+    // ticks_liquidities_deltas: Deltas<DeltaBigInt>,       /* store_ticks_liquidities */
+    tx_count_store: StoreGetBigInt,                      /* store_total_tx_counts */
+    store_eth_prices: StoreGetBigDecimal,                /* store_eth_prices */
+    // store_positions: StoreGetProto<PositionEvent>,       /* store_positions */
+    // min_windows_deltas: Deltas<DeltaBigDecimal>,         /* store_min_windows */
+    // max_windows_deltas: Deltas<DeltaBigDecimal>,         /* store_max_windows */
+) -> Result<EntityChanges, Error> {
+    let mut tables = Tables::new();
+
+    // Pool:
+    db::pools_created_pool_entity_changes(&mut tables, &pools_created);
+    db::sqrt_price_and_tick_pool_entity_change(&mut tables, &pool_sqrt_price_deltas);
+    db::price_pool_entity_change(&mut tables, &price_deltas);
+    db::tx_count_pool_entity_change(&mut tables, &tx_count_deltas);
+    db::swap_volume_pool_entity_change(&mut tables, &swaps_volume_deltas);
+
+    // Tokens:
+    db::tokens_created_token_entity_changes(&mut tables, &pools_created, tokens_store);
+    db::swap_volume_token_entity_change(&mut tables, &swaps_volume_deltas);
+    db::tx_count_token_entity_change(&mut tables, &tx_count_deltas);
+    db::derived_eth_prices_token_entity_change(&mut tables, &derived_eth_prices_deltas);
+
+    // Transaction:
+    db::transaction_entity_change(&mut tables, &events.transactions);
+
+    // Swap, Mint, Burn:
+    db::swaps_mints_burns_created_entity_change(&mut tables, &events.pool_events, tx_count_store, store_eth_prices);
+    // db::swaps_mints_burns_created_entity_change(&mut tables, &events.pool_events);
+
+    Ok(tables.to_entity_changes())
+}

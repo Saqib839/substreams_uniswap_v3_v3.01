@@ -1,0 +1,512 @@
+{
+  "@module": "custom_m1",
+  "@block": 12369760,
+  "@type": "sf.substreams.entity.v1.EntityChanges",
+  "@data": {
+    "entityChanges": [
+      {
+        "entity": "Token",
+        "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "operation": "CREATE",
+        "fields": [
+          {
+            "name": "name",
+            "newValue": {
+              "string": "Dai Stablecoin"
+            }
+          },
+          {
+            "name": "decimals",
+            "newValue": {
+              "bigint": "18"
+            }
+          },
+          {
+            "name": "feesUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLocked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "symbol",
+            "newValue": {
+              "string": "DAI"
+            }
+          },
+          {
+            "name": "volume",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalSupply",
+            "newValue": {
+              "bigint": "3957567232956508279745229988"
+            }
+          },
+          {
+            "name": "untrackedVolumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "poolCount",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "volumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "txCount",
+            "newValue": {
+              "bigint": "1"
+            }
+          },
+          {
+            "name": "derivedETH",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "whitelistPools",
+            "newValue": {
+              "array": {}
+            }
+          },
+          {
+            "name": "totalValueLockedUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLockedUSDUntracked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          }
+        ]
+      },
+      {
+        "entity": "Token",
+        "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "operation": "CREATE",
+        "fields": [
+          {
+            "name": "totalSupply",
+            "newValue": {
+              "bigint": "14251630384829550"
+            }
+          },
+          {
+            "name": "feesUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "derivedETH",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "untrackedVolumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "symbol",
+            "newValue": {
+              "string": "USDC"
+            }
+          },
+          {
+            "name": "name",
+            "newValue": {
+              "string": "USD Coin"
+            }
+          },
+          {
+            "name": "volume",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLocked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "poolCount",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "txCount",
+            "newValue": {
+              "bigint": "1"
+            }
+          },
+          {
+            "name": "totalValueLockedUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLockedUSDUntracked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "volumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "decimals",
+            "newValue": {
+              "bigint": "6"
+            }
+          },
+          {
+            "name": "whitelistPools",
+            "newValue": {
+              "array": {}
+            }
+          }
+        ]
+      },
+      {
+        "entity": "Pool",
+        "id": "0x6c6bc977e13df9b0de53b251522280bb72383700",
+        "operation": "CREATE",
+        "fields": [
+          {
+            "name": "token1Price",
+            "newValue": {
+              "bigdecimal": "0.9999026535655941110907406531427347469199986854337895682056029778889182979539420341006875781320288347000000000000"
+            }
+          },
+          {
+            "name": "volumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "volumeToken1",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "feeTier",
+            "newValue": {
+              "bigint": "500"
+            }
+          },
+          {
+            "name": "totalValueLockedETHUntracked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "collectedFeesToken0",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "feeGrowthGlobal0X128",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "token1",
+            "newValue": {
+              "string": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            }
+          },
+          {
+            "name": "liquidity",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "createdAtBlockNumber",
+            "newValue": {
+              "bigint": "12369760"
+            }
+          },
+          {
+            "name": "feeGrowthGlobal1X128",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "totalValueLockedETH",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "token0Price",
+            "newValue": {
+              "bigdecimal": "1.000097355911656757029272943322353182324371250592765484615349010670140458371083717256065583858005467"
+            }
+          },
+          {
+            "name": "txCount",
+            "newValue": {
+              "bigint": "1"
+            }
+          },
+          {
+            "name": "totalValueLockedUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "collectedFeesUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "volumeToken0",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLockedUSDUntracked",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "feesUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "sqrtPrice",
+            "newValue": {
+              "bigint": "79224306130848112672356"
+            }
+          },
+          {
+            "name": "totalValueLockedToken1",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "token0",
+            "newValue": {
+              "string": "0x6b175474e89094c44da98b954eedeac495271d0f"
+            }
+          },
+          {
+            "name": "tick",
+            "newValue": {
+              "bigint": "-276325"
+            }
+          },
+          {
+            "name": "collectedFeesToken1",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "totalValueLockedToken0",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          },
+          {
+            "name": "liquidityProviderCount",
+            "newValue": {
+              "bigint": "1"
+            }
+          },
+          {
+            "name": "createdAtTimestamp",
+            "newValue": {
+              "bigint": "1620158293"
+            }
+          },
+          {
+            "name": "observationIndex",
+            "newValue": {
+              "bigint": "0"
+            }
+          },
+          {
+            "name": "untrackedVolumeUSD",
+            "newValue": {
+              "bigdecimal": "0"
+            }
+          }
+        ]
+      },
+      {
+        "entity": "Transaction",
+        "id": "0xa877e18bbdcf69b751f56b4aa5b91a903ae69de2d775f1eb27fba4ba25abff2a",
+        "operation": "UPDATE",
+        "fields": [
+          {
+            "name": "blockNumber",
+            "newValue": {
+              "bigint": "12369760"
+            }
+          },
+          {
+            "name": "timestamp",
+            "newValue": {
+              "bigint": "1620158293"
+            }
+          },
+          {
+            "name": "gasUsed",
+            "newValue": {
+              "bigint": "5175195"
+            }
+          },
+          {
+            "name": "gasPrice",
+            "newValue": {
+              "bigint": "51000000000"
+            }
+          }
+        ]
+      },
+      {
+        "entity": "Mint",
+        "id": "0xa877e18bbdcf69b751f56b4aa5b91a903ae69de2d775f1eb27fba4ba25abff2a#1",
+        "operation": "CREATE",
+        "fields": [
+          {
+            "name": "amount",
+            "newValue": {
+              "bigint": "3964498619038659"
+            }
+          },
+          {
+            "name": "owner",
+            "newValue": {
+              "bytes": "w2RCtKRSLocTmc1xer3YR6sR/og="
+            }
+          },
+          {
+            "name": "token1",
+            "newValue": {
+              "string": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            }
+          },
+          {
+            "name": "sender",
+            "newValue": {
+              "bytes": "w2RCtKRSLocTmc1xer3YR6sR/og="
+            }
+          },
+          {
+            "name": "timestamp",
+            "newValue": {
+              "bigint": "1620158293"
+            }
+          },
+          {
+            "name": "token0",
+            "newValue": {
+              "string": "0x6b175474e89094c44da98b954eedeac495271d0f"
+            }
+          },
+          {
+            "name": "transaction",
+            "newValue": {
+              "string": "0xa877e18bbdcf69b751f56b4aa5b91a903ae69de2d775f1eb27fba4ba25abff2a"
+            }
+          },
+          {
+            "name": "amount1",
+            "newValue": {
+              "bigdecimal": "0.990903"
+            }
+          },
+          {
+            "name": "origin",
+            "newValue": {
+              "bytes": "S9BHynL6BfC4mtCP5bpczcB9/78="
+            }
+          },
+          {
+            "name": "tickUpper",
+            "newValue": {
+              "bigint": "-276320"
+            }
+          },
+          {
+            "name": "amountUSD",
+            "newValue": {
+              "bigdecimal": "0.000000000000000000"
+            }
+          },
+          {
+            "name": "amount0",
+            "newValue": {
+              "bigdecimal": "0.990999470264928008"
+            }
+          },
+          {
+            "name": "pool",
+            "newValue": {
+              "string": "0x6c6bc977e13df9b0de53b251522280bb72383700"
+            }
+          },
+          {
+            "name": "logIndex",
+            "newValue": {
+              "bigint": "84"
+            }
+          },
+          {
+            "name": "tickLower",
+            "newValue": {
+              "bigint": "-276330"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
